@@ -64,7 +64,7 @@ endforeach;
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6">
-                            {!! Form::select('parent_id', $model->parentList(), $model->parentList($model->parent_id)) !!}
+                            {!! Form::select('parent_id', $model->parentList(), $model->parentList($model->parent_id),['placeholder'=>'Select Parent']) !!}
                         </div>
                     </div>
                     <div class="form-group row">

@@ -16,7 +16,7 @@ class MemberController extends Controller
         $data=[];
         $data['status']='NOK';
         $model= new Member();
-        $parentData= Member::where('parent_id','0')->with('children')->get();
+        $parentData= Member::where('parent_id',null)->with('children')->get();
         if($request->ajax() && $request->input()){
                 $input=$request->except('_token');
                 $input['createdate'] =Carbon::now();
