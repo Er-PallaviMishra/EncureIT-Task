@@ -13,13 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 // Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('form','App\Http\Controllers\CategoryController@store');
-Route::get('data','App\Http\Controllers\MemberController@display');
+Route::get('/','App\Http\Controllers\MemberController@display');
 Route::post('data','App\Http\Controllers\MemberController@display');
 

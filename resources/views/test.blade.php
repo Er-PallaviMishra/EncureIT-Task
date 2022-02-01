@@ -57,7 +57,7 @@ endforeach;
                     {!! Form::open(['id' => 'formData']) !!}
                     <div class="form-group row">
                         <div class="col-md-6">
-                            {!! Form::text('name', $model->name, ['id' => 'user-name', 'autocomplete' => 'off']) !!}
+                            {!! Form::text('name', null, ['id' => 'user-name', 'autocomplete' => 'off']) !!}
 
                             <div id="user-name-invalid" class="d-none"></div>
                         </div>

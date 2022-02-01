@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
-    public function showData(){
-        return view('test');
-    }
+
 
     public function display(Request $request){
         $data=[];

@@ -24,34 +24,7 @@ class Member extends Model
                 }
             return isset($list[$id])?$list[$id]:null;
         }
-        public static function boot()
-        {
-            parent::boot();
-
-            self::creating(function($model){
-                
-            });
-
-            self::created(function($model){
-                $model->createdate = Carbon::now();
-            });
-
-            self::updating(function($model){
-                // ... code here
-            });
-
-            self::updated(function($model){
-                // ... code here
-            });
-
-            self::deleting(function($model){
-                // ... code here
-            });
-
-            self::deleted(function($model){
-                // ... code here
-            });
-        }
+       
         public function children()
         {
             return $this->hasMany(self::class, 'parent_id', 'id');
